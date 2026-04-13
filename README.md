@@ -265,31 +265,16 @@ The collection is organized into **9 modules**, mirroring the backend feature st
 
 ## 📸 Screenshots
 
-### 🔐 Farmer Login — Success Response
-![Farmer Login Success](./screenshots/farmer_login_success.png)
-
-### 🔐 Farmer Login — Invalid Credentials
-![Farmer Login Failed](./screenshots/farmer_login_failed.png)
-
-### 📋 Get All Listings — Response
-![Get All Listings](./screenshots/get_all_listings.png)
-
-### ➕ Crop Listing — Create Request & Response
-![Crop Listing](./screenshots/crop_listing_create.png)
-
-### 💰 Add Price Entry — Farmer
-![Add Price Entry](./screenshots/add_price_entry.png)
-
-### 🤝 Send Connection Request
-![Connection Request](./screenshots/send_connection_request.png)
-
-### ✅ Accept Connection — Status Update
-![Accept Connection](./screenshots/accept_connection.png)
-
-### ❌ Unauthorized Access — 403 Error
-![Unauthorized](./screenshots/unauthorized_403.png)
 
 > 📁 All screenshots are stored in the `/screenshots` folder of this repository.
+
+![Screenshot 1](screenshots/Screenshot_1.jpg)
+
+![Farmer Login Success](screenshots/farmer_login_success.png.jpg)
+
+![Farmer Login Failed](screenshots/farmer_login_failed.png.jpg)
+
+![Get All Listings](screenshots/get_all_listings.png.jpg)
 
 ---
 
@@ -300,7 +285,6 @@ MandiConnect-API-Testing/
 │
 ├── 📂 postman/
 │   ├── MandiConnect_Collection.json          # Exported Postman collection
-│   └── MandiConnect_Environment.json         # Environment variables (renderurl, localurl)
 │
 ├── 📂 screenshots/
 │   ├── farmer_login_success.png
@@ -311,7 +295,6 @@ MandiConnect-API-Testing/
 │   ├── send_connection_request.png
 │   ├── accept_connection.png
 │   └── unauthorized_403.png
-│
 │
 └── 📄 README.md                              # Project documentation
 ```
