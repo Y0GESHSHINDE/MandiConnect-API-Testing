@@ -1,0 +1,1701 @@
+{
+  "info": {
+    "_postman_id": "07f08056-1f43-4c96-89e4-a9f2c18fec30",
+    "name": "MandiConnect",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38511836",
+    "_collection_link": "https://go.postman.co/collection/38511836-07f08056-1f43-4c96-89e4-a9f2c18fec30?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "authentication",
+      "item": [
+        {
+          "name": "farmer",
+          "item": [
+            {
+              "name": "Farmer-signup",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "// {\r\n//   \"name\": \"Sanke kale\",\r\n//   \"mobile\": \"9876514520\",\r\n//   \"email\": \"farmer@mail.com\",\r\n//   \"password\": \"12345\",\r\n\r\n//   \"farmerAddress\": {\r\n//     \"city\": \"Sangamner\",\r\n//     \"state\": \"Maharashtra\",\r\n//     \"country\": \"India\"\r\n//   },\r\n\r\n//   \"farmDetails\": {\r\n//     \"farmSize\": \"2 acres\",\r\n//     \"cropIds\": [\r\n//       \"68cac816fcd7953ed17a3f1b\"\r\n//     ],\r\n//     \"preferredMarketIds\": [\r\n//       \"68cac78efcd7953ed17a3f17\"\r\n//     ],\r\n//     \"irrigationType\": \"Drip\",\r\n//     \"soilType\": \"Black\"\r\n//   }\r\n// }\r\n\r\n{\r\n  \"name\": \"Sejal Shinde\",\r\n  \"mobile\": \"9876514522\",\r\n  \"email\": \"sejalshinde6552@gmail.com\",\r\n  \"password\": \"12345\",\r\n\r\n  \"farmerAddress\": {\r\n    \"city\": \"Sangamner\",\r\n    \"state\": \"Maharashtra\",\r\n    \"country\": \"India\"\r\n  },\r\n\r\n  \"farmDetails\": {\r\n    \"farmSize\": \"2 acres\",\r\n    \"cropIds\": [\r\n      \"68cac816fcd7953ed17a3f1b\"\r\n    ],\r\n    \"preferredMarketIds\": [\r\n      \"68cac78efcd7953ed17a3f17\"\r\n    ],\r\n    \"irrigationType\": \"Drip\",\r\n    \"soilType\": \"Black\"\r\n  }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://mandiconnect.onrender.com/farmer/signup",
+                  "protocol": "https",
+                  "host": [
+                    "mandiconnect",
+                    "onrender",
+                    "com"
+                  ],
+                  "path": [
+                    "farmer",
+                    "signup"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Farmer- verify",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{https://mandiconnect.onrender.com}}/farmer/verify?token=eaffa2c8-e2a8-4d92-8225-79d7b2f38046",
+                  "host": [
+                    "{{https://mandiconnect.onrender.com}}"
+                  ],
+                  "path": [
+                    "farmer",
+                    "verify"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "eaffa2c8-e2a8-4d92-8225-79d7b2f38046"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getAllFarmer",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "url": {
+                  "raw": "{{renderurl}}/farmer/getFarmers",
+                  "host": [
+                    "{{renderurl}}"
+                  ],
+                  "path": [
+                    "farmer",
+                    "getFarmers"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getFarmerById",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{renderurl}}/farmer/69765976175f0271382b5ad5",
+                  "host": [
+                    "{{renderurl}}"
+                  ],
+                  "path": [
+                    "farmer",
+                    "69765976175f0271382b5ad5"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Farmer-login",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"email\": \"farmer@mail.com\",\r\n  \"password\" : \"12345\"//updates pawword\r\n}\r\n// {\r\n//   \"email\": \"sejalshinde6552@gamil.com\",\r\n//   \"password\" : \"12345\"\r\n// }\r\n\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/farmer/login",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "farmer",
+                    "login"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Farmer - Update",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5b2dlc2hzaGluZGUzNjI0QGdtYWlsLmNvbSIsImlhdCI6MTc1Nzg0MTA1NywiZXhwIjoxNzYxNDQxMDU3fQ.23D69YRDcX923l3WFaaOHup0nE4y9XfGrYxNxs8pblw",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Yogesh Shinde\",\r\n  \"password\": \"123456\",\r\n  \"farmerAddress\": {\r\n    \"city\": \"Sangamner\",\r\n    \"state\": \"MH\",\r\n    \"country\": \"India\"\r\n  },\r\n  \"farmDetails\": {\r\n    \"farmSize\": \"10acres\",\r\n    \"cropsGrown\": [\"Tomato\", \"Onion\"],\r\n    \"irrigationType\": \"Drip\",\r\n    \"soilType\": \"Black Soil\"\r\n  }\r\n}"
+                },
+                "url": {
+                  "raw": "{{renderurl}}}/farmer/update/69765976175f0271382b5ad5",
+                  "host": [
+                    "{{renderurl}}}"
+                  ],
+                  "path": [
+                    "farmer",
+                    "update",
+                    "69765976175f0271382b5ad5"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Farmer delete",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5b2dlc2hzaGluZGUzNjI0QGdtYWlsLmNvbSIsImlhdCI6MTc1Nzg0MTA1NywiZXhwIjoxNzYxNDQxMDU3fQ.23D69YRDcX923l3WFaaOHup0nE4y9XfGrYxNxs8pblw",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{https://mandiconnect.onrender.com}}/farmer/delete/68c676f29361cfa1067e3612",
+                  "host": [
+                    "{{https://mandiconnect.onrender.com}}"
+                  ],
+                  "path": [
+                    "farmer",
+                    "delete",
+                    "68c676f29361cfa1067e3612"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Forgot Password",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"email\": \"sejalshinde6552@gmail.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/farmer/forgot-password",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "farmer",
+                    "forgot-password"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Reset Password",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/farmer/reset-password?token=841b8af8-c642-4304-a286-87a6c4471337",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "farmer",
+                    "reset-password"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "841b8af8-c642-4304-a286-87a6c4471337"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Reset-Password",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"password\": \"@12345\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/farmer/reset-password?token=841b8af8-c642-4304-a286-87a6c4471337",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "farmer",
+                    "reset-password"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "841b8af8-c642-4304-a286-87a6c4471337"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "buyer",
+          "item": [
+            {
+              "name": "Buyer SignUp",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Sejal Shinde\",\r\n  \"mobile\": \"1111111111\",\r\n  \"email\": \"sejalshinde6552@gmail.com\",\r\n  \"password\": \"12345\",\r\n  \"companyName\": \"AgriBuyers Inc.\",\r\n  \"companyAddress\": {\r\n    \"city\": \"Sangamner\",\r\n    \"state\": \"Maharashtra\",\r\n    \"country\": \"India\"\r\n  },\r\n  \"preferredCrops\": [\"Wheat\", \"Corn\"]\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{renderurl}}/buyer/signup",
+                  "host": [
+                    "{{renderurl}}"
+                  ],
+                  "path": [
+                    "buyer",
+                    "signup"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Buyer - Login",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"buyer@mail.com\",\r\n    \"password\": \"12345\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/buyer/login",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "buyer",
+                    "login"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getAllBuyer",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{localurl}}/buyer/getAll",
+                  "host": [
+                    "{{localurl}}"
+                  ],
+                  "path": [
+                    "buyer",
+                    "getAll"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getBuyerByID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{renderurl}}/buyer/6986163ba2233b3792d4bccb",
+                  "host": [
+                    "{{renderurl}}"
+                  ],
+                  "path": [
+                    "buyer",
+                    "6986163ba2233b3792d4bccb"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Buyer - Verification",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"Email\": \"sejalshinde6552.com\",\r\n    \"Password\": \"12345\"\r\n}\r\n"
+                },
+                "url": {
+                  "raw": "{{localurl}}/buyer/verify?token=474b0d74-d856-49ff-8a09-bb026536bf9a",
+                  "host": [
+                    "{{localurl}}"
+                  ],
+                  "path": [
+                    "buyer",
+                    "verify"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "474b0d74-d856-49ff-8a09-bb026536bf9a"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Buyer - Update",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWphbHNoaW5kZTIxMjJAZ21haWwuY29tIiwiaWF0IjoxNzY5NDQzMjIyLCJleHAiOjE3NzMwNDMyMjJ9.FHiSAHcAwC147CyH7694POYO-eNftnfdsDAuLdLg6bw",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Yogesh\",\r\n    \"mobile\": \"9685748596\",\r\n    \"PreferredCrops\": [\r\n        \"{id}\",\r\n        \"{id}\"\r\n    ],\r\n    \"Company Address\": {\r\n        \"city\": \"Sangamner\",\r\n        \"state\": \"Maharashtra\",\r\n        \"country\": \"India\"\r\n    }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{renderurl}}/buyer/update/6986163ba2233b3792d4bccb",
+                  "host": [
+                    "{{renderurl}}"
+                  ],
+                  "path": [
+                    "buyer",
+                    "update",
+                    "6986163ba2233b3792d4bccb"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Buyer - Delete",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWphbHNoaW5kZTY1NTJAZ21haWwuY29tIiwiaWF0IjoxNzU3OTYxMTI2LCJleHAiOjE3NjE1NjExMjZ9.gIKwF1ri2D7l8aAI6onaAchvMJf95BQcxkZJq1xVxxY",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{https://mandiconnect.onrender.com}}/buyer/delete/68c8609609baad4b318d3087",
+                  "host": [
+                    "{{https://mandiconnect.onrender.com}}"
+                  ],
+                  "path": [
+                    "buyer",
+                    "delete",
+                    "68c8609609baad4b318d3087"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Forget Password",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"email\": \"sejalshinde6552@gmail.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/buyer/forgot-password",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "buyer",
+                    "forgot-password"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Reset password",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"password\": \"@12345\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/buyer/reset-password?token=4337587d-0588-45c4-9097-ae0b2025098b",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "buyer",
+                    "reset-password"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "4337587d-0588-45c4-9097-ae0b2025098b"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Reset-Password",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"password\": \"@12345\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/buyer/reset-password?token=4337587d-0588-45c4-9097-ae0b2025098b",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "buyer",
+                    "reset-password"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "4337587d-0588-45c4-9097-ae0b2025098b"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ],
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Common api",
+      "item": [
+        {
+          "name": "Add Market",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"marketName\": \"Gujrath Central Market\",\r\n  \"marketAddress\": {\r\n    \"city\": \"GG\",\r\n    \"state\": \"Gujrath\",\r\n    \"country\": \"India\"\r\n  }\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{renderurl}}/addMarket",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "addMarket"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all market",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{renderurl}}/getAllMarket",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "getAllMarket"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Crop",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"wheat\",\r\n    \"type\": \"grain\", // if can be grain , fruit ,vegetable ,leafy-vegetable\r\n    \"variety\": \"2662\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{renderurl}}/addCrop",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "addCrop"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all crops",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{renderurl}}/getAllCrop",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "getAllCrop"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Farmer Price Featurs",
+      "item": [
+        {
+          "name": "Add farmer Price Entry",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYXJtZXJAbWFpbC5jb20iLCJpYXQiOjE3NzM1MTAzMDMsImV4cCI6MTc3NzExMDMwM30.o3YPBe63PYF9wEHzEoWtQy2Oq_vyn9E6EVmvwyhdo7E",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"farmer\": {\r\n    \"id\": \"69765976175f0271382b5ad5\"\r\n  },\r\n  \"crop\": {\r\n    \"id\": \"68cac84cfcd7953ed17a3f1e\"\r\n  },\r\n  \"market\": {\r\n    \"id\": \"690f0f7699d3be99303ddf82\"\r\n  },\r\n  \"price\": 200,\r\n  \"quantity\": \"1 kg\",\r\n  \"photo\": \"https://res.cloudinary.com/demo/image/upload/sample.jpg\",\r\n  \"status\": \"active\",\r\n  \"feedback\": {\r\n    \"agreeCount\": 0,\r\n    \"disagreeCount\": 0,\r\n    \"votedFarmers\": []\r\n  }\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{renderurl}}/farmer-entries/add",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "farmer-entries",
+                "add"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Price Entries",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYXJtZXJAbWFpbC5jb20iLCJpYXQiOjE3NzM1MTAzMDMsImV4cCI6MTc3NzExMDMwM30.o3YPBe63PYF9wEHzEoWtQy2Oq_vyn9E6EVmvwyhdo7E",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{renderurl}}/farmer-entries/getAllEntries",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "farmer-entries",
+                "getAllEntries"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Price entries by cropid and marketid",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWphbHNoaW5kZTY1NTJAZ2FtaWwuY29tIiwiaWF0IjoxNzY5NDQzNzUyLCJleHAiOjE3NzMwNDM3NTJ9.nfqmLcSEAW2Q3wwPsEIpaitI8mAFHQudd3CPsouaJtg",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{renderurl}}/farmer-entries/getByCropAndMarket/{crop id}/{marketid}",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "farmer-entries",
+                "getByCropAndMarket",
+                "{crop id}",
+                "{marketid}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Price Entry by Farmer ID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWphbHNoaW5kZTY1NTJAZ2FtaWwuY29tIiwiaWF0IjoxNzY5NDQzNzUyLCJleHAiOjE3NzMwNDM3NTJ9.nfqmLcSEAW2Q3wwPsEIpaitI8mAFHQudd3CPsouaJtg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"farmer\": {\r\n    \"id\": \"69778b5fc2b47e23fb652521\"\r\n  },\r\n  \"crop\": {\r\n    \"id\": \"69779294a04c10386516eb9c\"\r\n  },\r\n  \"market\": {\r\n    \"id\": \"69779210a04c10386516eb9b\"\r\n  },\r\n  \"price\": 40,\r\n  \"quantity\": \"15 kg\",\r\n  \"photo\": \"https://res.cloudinary.com/demo/image/upload/sample.jpg\",\r\n  \"status\": \"active\",\r\n  \"feedback\": {\r\n    \"agreeCount\": 0,\r\n    \"disagreeCount\": 0,\r\n    \"votedFarmers\": []\r\n  }\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{renderurl}}/farmer-entries/getByFarmerId/69765976175f0271382b5ad5",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "farmer-entries",
+                "getByFarmerId",
+                "69765976175f0271382b5ad5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "price-agree",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYW1lc2hAZ2FtaWwuY29tIiwiaWF0IjoxNzY5MzYyMTAzLCJleHAiOjE3NzI5NjIxMDN9.AkgNHN9T8MGchkq8bNXcuSl53geSPwnGH9uhYDfPwrQ",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{renderurl}}/farmer-entries/agree/6993715551f7b7cb5ae7e894/698eeff9fb42ec83b0432161",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "farmer-entries",
+                "agree",
+                "6993715551f7b7cb5ae7e894",
+                "698eeff9fb42ec83b0432161"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "price -disagree",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYW1lc2hAZ2FtaWwuY29tIiwiaWF0IjoxNzY5MzYyMTAzLCJleHAiOjE3NzI5NjIxMDN9.AkgNHN9T8MGchkq8bNXcuSl53geSPwnGH9uhYDfPwrQ",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{renderurl}}/farmer-entries/disagree/697793a3a04c10386516eb9d/69778b5fc2b47e23fb652521",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "farmer-entries",
+                "disagree",
+                "697793a3a04c10386516eb9d",
+                "69778b5fc2b47e23fb652521"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get agree count",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWphbHNoaW5kZTY1NTJAZ2FtaWwuY29tIiwiaWF0IjoxNzY5NDQ5MTk1LCJleHAiOjE3NzMwNDkxOTV9.CMNRVUVebNYv1qLmKQ4WQjYXAo-UUPOdB1JtpMJ1uJ8",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{renderurl}}/farmer-entries/agree-count/697793a3a04c10386516eb9d",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "farmer-entries",
+                "agree-count",
+                "697793a3a04c10386516eb9d"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get disagree count",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWphbHNoaW5kZTY1NTJAZ2FtaWwuY29tIiwiaWF0IjoxNzY5NDQ5MTk1LCJleHAiOjE3NzMwNDkxOTV9.CMNRVUVebNYv1qLmKQ4WQjYXAo-UUPOdB1JtpMJ1uJ8",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{renderurl}}/farmer-entries/disagree-count/697793a3a04c10386516eb9d",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "farmer-entries",
+                "disagree-count",
+                "697793a3a04c10386516eb9d"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Price Market Stats",
+      "item": [
+        {
+          "name": "getByCropIdAndMarketid",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWphbHNoaW5kZTY1NTJAZ2FtaWwuY29tIiwiaWF0IjoxNzY5NDQ5MTk1LCJleHAiOjE3NzMwNDkxOTV9.CMNRVUVebNYv1qLmKQ4WQjYXAo-UUPOdB1JtpMJ1uJ8",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{renderurl}}/stats/getByCropIdAndMarketid/{cropid}/{marketid}",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "stats",
+                "getByCropIdAndMarketid",
+                "{cropid}",
+                "{marketid}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Stats By Market",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWphbHNoaW5kZTY1NTJAZ2FtaWwuY29tIiwiaWF0IjoxNzY5NDQ5MTk1LCJleHAiOjE3NzMwNDkxOTV9.CMNRVUVebNYv1qLmKQ4WQjYXAo-UUPOdB1JtpMJ1uJ8",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{renderurl}}/stats/getByMarket/69779210a04c10386516eb9b",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "stats",
+                "getByMarket",
+                "69779210a04c10386516eb9b"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Stats By Crop",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWphbHNoaW5kZTY1NTJAZ2FtaWwuY29tIiwiaWF0IjoxNzY5NDQ5MTk1LCJleHAiOjE3NzMwNDkxOTV9.CMNRVUVebNYv1qLmKQ4WQjYXAo-UUPOdB1JtpMJ1uJ8",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{renderurl}}}/stats/getByCrop/69779294a04c10386516eb9c",
+              "host": [
+                "{{renderurl}}}"
+              ],
+              "path": [
+                "stats",
+                "getByCrop",
+                "69779294a04c10386516eb9c"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "MarketPlace- Farmer Side",
+      "item": [
+        {
+          "name": "Upload File API",
+          "protocolProfileBehavior": {
+            "disabledSystemHeaders": {}
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5czc5NTcwMkBnbWFpbC5jb20iLCJpYXQiOjE3NTg4OTg0OTQsImV4cCI6MTc2MjQ5ODQ5NH0.uYnsZdBwhb2Fq2WQbAqsMJmRJainXIur9fHWUQ1_2Rc",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "22f03a68-f617-4303-8fda-b24f8e53c2ec",
+                  "src": "/C:/Users/admin/Downloads/UC-a4cac6e1-5d7c-40eb-b929-f5c9a661df27.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{https://mandiconnect.onrender.com}}/marketplace/farmer/upload",
+              "host": [
+                "{{https://mandiconnect.onrender.com}}"
+              ],
+              "path": [
+                "marketplace",
+                "farmer",
+                "upload"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete File API",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5czc5NTcwMkBnbWFpbC5jb20iLCJpYXQiOjE3NTg4OTg0OTQsImV4cCI6MTc2MjQ5ODQ5NH0.uYnsZdBwhb2Fq2WQbAqsMJmRJainXIur9fHWUQ1_2Rc",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{https://mandiconnect.onrender.com}}/marketplace/farmer/delete?public_id=CropListingImages/jhdps6gqlp96c2sjqwg5",
+              "host": [
+                "{{https://mandiconnect.onrender.com}}"
+              ],
+              "path": [
+                "marketplace",
+                "farmer",
+                "delete"
+              ],
+              "query": [
+                {
+                  "key": "public_id",
+                  "value": "CropListingImages/jhdps6gqlp96c2sjqwg5"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "cropListing",
+          "protocolProfileBehavior": {
+            "disabledSystemHeaders": {}
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYXJtZXJAbWFpbC5jb20iLCJpYXQiOjE3Njk4NzE4OTEsImV4cCI6MTc3MzQ3MTg5MX0.zNuFk_SpgTKhvYKcXSaq8ZfwtMWeBGXv4T14XGafy9o",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"farmer\": {\r\n    \"id\": \"69765976175f0271382b5ad5\"\r\n  },\r\n  \"crop\": {\r\n    \"id\": \"68cac816fcd7953ed17a3f1b\"\r\n  },\r\n  \"quantity\": 20,\r\n  \"unit\": \"kg\",\r\n  \"price\": 2200,\r\n  \"location\": {\r\n    \"village\" : \"Manoli\",\r\n    \"city\": \"Sangamner\",\r\n    \"state\": \"Maharashtra\",\r\n    \"country\": \"India\"\r\n  },\r\n  \"photoUrl\": \"https://res.cloudinary.com/dke9lzp1k/image/upload/v1758560844/CropListing%20Images/tmotdubtylpsiazqztrd.jpg\",\r\n   \"publicId\": \"CropListing Images/tmotdubtylpsiazqztrd\",\r\n  \"status\": \"active\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/marketplace/farmer/cropListing",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "marketplace",
+                "farmer",
+                "cropListing"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Listing",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJidXllckBtYWlsLmNvbSIsImlhdCI6MTc2OTk2MjQ0OCwiZXhwIjoxNzczNTYyNDQ4fQ.J39pLN8jMEDjYdq4zPb2NFjRtRcgebemMLrQxAJWFUY",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{renderurl}}/marketplace/farmer/getAllListing",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "marketplace",
+                "farmer",
+                "getAllListing"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "MarketPlace- Buyer Side",
+      "item": [
+        {
+          "name": "Buyer - add Demand",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJidXllckBtYWlsLmNvbSIsImlhdCI6MTc2OTk2MjQ0OCwiZXhwIjoxNzczNTYyNDQ4fQ.J39pLN8jMEDjYdq4zPb2NFjRtRcgebemMLrQxAJWFUY",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"BuyerId\": \"6986163ba2233b3792d4bccb\",\r\n  \"CropId\": \"68cac816fcd7953ed17a3f1b\",\r\n  \"RequiredQuantity\": { \"Value\": 10, \"Unit\": \"quintal\" },\r\n  \"ExpectedPrice\": { \"Value\": 20000, \"Currency\": \"INR\" }\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{renderurl}}/marketplace/buyer/add",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "marketplace",
+                "buyer",
+                "add"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buyer - get all Demands",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJidXllckBtYWlsLmNvbSIsImlhdCI6MTc2OTk2MjQ0OCwiZXhwIjoxNzczNTYyNDQ4fQ.J39pLN8jMEDjYdq4zPb2NFjRtRcgebemMLrQxAJWFUY",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{renderurl}}/marketplace/buyer/all",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "marketplace",
+                "buyer",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buyer - Update Demand",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWphbHNoaW5kZTY1NTJAZ21haWwuY29tIiwiaWF0IjoxNzU4NDM5NzI1LCJleHAiOjE3NjIwMzk3MjV9.jSczDPduNVtZ0d4PpR9Vgl6bk-KljA88VXY5nSeIZ6E",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\": \"fulfilled\" //\"active\", \"fulfilled\", \"cancelled\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{renderurl}}/marketplace/buyer/updateStatus/68d00df60534423c0755b278",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "marketplace",
+                "buyer",
+                "updateStatus",
+                "68d00df60534423c0755b278"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Demand by Buyer Id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJidXllckBtYWlsLmNvbSIsImlhdCI6MTc2OTk2MjQ0OCwiZXhwIjoxNzczNTYyNDQ4fQ.J39pLN8jMEDjYdq4zPb2NFjRtRcgebemMLrQxAJWFUY",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{renderurl}}/marketplace/buyer/buyer/6986163ba2233b3792d4bccb",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "marketplace",
+                "buyer",
+                "buyer",
+                "6986163ba2233b3792d4bccb"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buyer - Delete Demand",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWphbHNoaW5kZTY1NTJAZ21haWwuY29tIiwiaWF0IjoxNzU4NDM5NzI1LCJleHAiOjE3NjIwMzk3MjV9.jSczDPduNVtZ0d4PpR9Vgl6bk-KljA88VXY5nSeIZ6E",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{https://mandiconnect.onrender.com}}/marketplace/buyer/delete/68cfaaeeb3cd9b3071df346e",
+              "host": [
+                "{{https://mandiconnect.onrender.com}}"
+              ],
+              "path": [
+                "marketplace",
+                "buyer",
+                "delete",
+                "68cfaaeeb3cd9b3071df346e"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Demands by Status",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWphbHNoaW5kZTY1NTJAZ21haWwuY29tIiwiaWF0IjoxNzU4NDM5NzI1LCJleHAiOjE3NjIwMzk3MjV9.jSczDPduNVtZ0d4PpR9Vgl6bk-KljA88VXY5nSeIZ6E",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{https://mandiconnect.onrender.com}}/marketplace/buyer/status/active",
+              "host": [
+                "{{https://mandiconnect.onrender.com}}"
+              ],
+              "path": [
+                "marketplace",
+                "buyer",
+                "status",
+                "active"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Notifications",
+      "item": [
+        {
+          "name": "GetNotificationsById",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWphbHNoaW5kZTY1NTJAZ2FtaWwuY29tIiwiaWF0IjoxNzY5NDQ5MTk1LCJleHAiOjE3NzMwNDkxOTV9.CMNRVUVebNYv1qLmKQ4WQjYXAo-UUPOdB1JtpMJ1uJ8",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{renderurl}}/notifications/user/69765976175f0271382b5ad5",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "notifications",
+                "user",
+                "69765976175f0271382b5ad5"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "ConnectionRequest",
+      "item": [
+        {
+          "name": "Get All Connection Request",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYXJtZXJAbWFpbC5jb20iLCJpYXQiOjE3NzQ1NDIwMTEsImV4cCI6MTc3ODE0MjAxMX0.8LQj6DfWdJxifjIHU5Oh0PUehtYO5S7LfbNLLYHkwJk",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/connections/incoming/69765976175f0271382b5ad5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "connections",
+                "incoming",
+                "69765976175f0271382b5ad5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CreateConnectionsRequest",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJidXllckBtYWlsLmNvbSIsImlhdCI6MTc3NDYyMzQ4NSwiZXhwIjoxNzc4MjIzNDg1fQ.Eo3RQgQ8xCIIyxYzCaQzShGKHbu7AurTeAcmz_ZvJ0k",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"senderId\": \"6986163ba2233b3792d4bccb\",\r\n  \"senderRole\": \"BUYER\",\r\n  \"receiverId\": \"69765976175f0271382b5ad5\",\r\n  \"receiverRole\": \"FARMER\",\r\n  \"referenceType\": \"CROP\",\r\n  \"referenceId\": \"6997df3e70ee2ddbd839147c\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/connections/send",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "connections",
+                "send"
+              ]
+            },
+            "description": "StartFragment\n\n### Example A: Buyer → Farmer (from listing)\n\n```\n{\n  \"senderId\": \"buyer123\",\n  \"senderRole\": \"BUYER\",\n  \"receiverId\": \"farmer789\",\n  \"receiverRole\": \"FARMER\",\n  \"referenceType\": \"LISTING\",\n  \"referenceId\": \"farmerEntry456\"\n}\n\n ```\n\n---\n\n### Example B: Farmer → Buyer (from demand)\n\n```\n{\n  \"senderId\": \"farmer789\",\n  \"senderRole\": \"FARMER\",\n  \"receiverId\": \"buyer123\",\n  \"receiverRole\": \"BUYER\",\n  \"referenceType\": \"DEMAND\",\n  \"referenceId\": \"buyerDemand999\"\n}\n\n ```\n\nEndFragment"
+          },
+          "response": []
+        },
+        {
+          "name": "Accept Connection Request",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYXJtZXJAbWFpbC5jb20iLCJpYXQiOjE3NzQ2MjQ2MTUsImV4cCI6MTc3ODIyNDYxNX0.rqijRN5pdmSZY_TJQRSwpszDwq6Py8_7pd2Lh65VZZY",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/connections/accept/69c69e21e2061578ea9ae65f",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "connections",
+                "accept",
+                "69c69e21e2061578ea9ae65f"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reject Connection Request",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWphbHNoaW5kZTY1NTJAZ2FtaWwuY29tIiwiaWF0IjoxNzY5NDQ5MTk1LCJleHAiOjE3NzMwNDkxOTV9.CMNRVUVebNYv1qLmKQ4WQjYXAo-UUPOdB1JtpMJ1uJ8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8080/connections/reject/69c69e21e2061578ea9ae65f",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "connections",
+                "reject",
+                "69c69e21e2061578ea9ae65f"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get My Sent Requests",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWphbHNoaW5kZTY1NTJAZ2FtaWwuY29tIiwiaWF0IjoxNzY5NDQ5MTk1LCJleHAiOjE3NzMwNDkxOTV9.CMNRVUVebNYv1qLmKQ4WQjYXAo-UUPOdB1JtpMJ1uJ8",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/connections/sent/69746ed9adc12a0348b70865",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "connections",
+                "sent",
+                "69746ed9adc12a0348b70865"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "check status",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJidXllckBtYWlsLmNvbSIsImlhdCI6MTc3NDYyMzQ4NSwiZXhwIjoxNzc4MjIzNDg1fQ.Eo3RQgQ8xCIIyxYzCaQzShGKHbu7AurTeAcmz_ZvJ0k",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{renderurl}}/connections/status?senderId=6986163ba2233b3792d4bccb&senderRole=BUYER&otherUserId=69765976175f0271382b5ad5&otherUserRole=FARMER",
+              "host": [
+                "{{renderurl}}"
+              ],
+              "path": [
+                "connections",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "senderId",
+                  "value": "6986163ba2233b3792d4bccb"
+                },
+                {
+                  "key": "senderRole",
+                  "value": "BUYER"
+                },
+                {
+                  "key": "otherUserId",
+                  "value": "69765976175f0271382b5ad5"
+                },
+                {
+                  "key": "otherUserRole",
+                  "value": "FARMER"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Chat",
+      "item": [
+        {
+          "name": "Open or create chat",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
